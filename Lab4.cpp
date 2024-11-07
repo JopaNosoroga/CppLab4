@@ -9,13 +9,19 @@ protected:
   double c;
 
 public:
-  // QadraticEquation(int temp) {
-  // a = temp;
-  // b = temp;
-  // c = temp;
-  //}
+  QadraticEquation(int temp) {
+    a = temp;
+    b = temp;
+    c = temp;
+  }
 
-  QadraticEquation(int temp = 0) {
+  QadraticEquation(double temp_a, double temp_b, double temp_c) {
+    a = temp_a;
+    b = temp_b;
+    c = temp_c;
+  }
+
+  QadraticEquation(std::string ask) {
     std::cout << "Введите первый коэффициент: ";
     std::cin >> a;
     std::cout << "Введите второй коэффициент: ";
